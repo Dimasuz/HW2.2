@@ -1,0 +1,13 @@
+
+CREATE TABLE Department (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(40) NOT NULL        
+);
+
+
+CREATE TABLE Employee (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(40) NOT NULL,        
+    department_id INTEGER REFERENCES Department(id),
+    chief integer REFERENCES Employee(id)
+);
