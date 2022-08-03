@@ -1,8 +1,3 @@
-CREATE DATABASE Art
-
-USE Art
-
-
 CREATE TABLE IF NOT EXISTS Artists (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(80) NOT NULL
@@ -49,7 +44,4 @@ CREATE TABLE IF NOT EXISTS CollectionTreck (
 	treck_id INTEGER REFERENCES Trecks(id),
 	CONSTRAINT PK_CollectionTreck PRIMARY KEY (collection_id, treck_id)
 );
-
-
-
 
